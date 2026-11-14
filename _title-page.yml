@@ -1,0 +1,70 @@
+# Author details for the title page (title-page.qmd) and the vitae
+# (vitae.qmd). The anonymized manuscript does not read this file.
+#
+# JBR asks for a title page with the title; the author names; below them,
+# the affiliations with the full postal address of each, including the
+# country; the full postal address and e-mail address of the corresponding
+# author; acknowledgments; and the declaration of competing interests
+# (unless it is submitted as a separate file). The extension marks each
+# affiliation with a lowercase superscript letter, as the guide asks.
+#
+# biography: at most 100 words for each author. Begin with the author's
+# name or leave it out; the extension prints the name in bold at the start.
+
+author:
+  - name: First Author
+    email: first.author@university.edu
+    corresponding: true
+    # Full postal address of the corresponding author
+    address: "School of Business, University Name, 123 University Avenue, City, ST 12345, Country"
+    affiliations:
+      - name: University Name
+        department: School of Business
+        address: 123 University Avenue
+        city: City
+        region: ST
+        postal-code: "12345"
+        country: Country
+    biography: |
+      First Author is a professor of marketing at the School of Business,
+      University Name. [Degrees, research interests, and selected
+      publications.]
+  - name: Second Author
+    # An author who has moved since the work was done keeps the affiliation
+    # where it was done and adds one of these lines; it is printed as a
+    # note marked with a superscript numeral.
+    # present-address: "Department of Marketing, New University, City, Country"
+    # permanent-address: "..."
+    affiliations:
+      - name: Another University
+        department: Department of Marketing
+        address: 45 College Road
+        city: City
+        postal-code: "AB1 2CD"
+        country: Country
+    biography: |
+      Second Author is an assistant professor of marketing at Another
+      University. [Degrees, research interests, and selected publications.]
+
+acknowledgments: |
+  The authors thank the editor and the review team for their comments.
+
+# funding: the guide gives a standard form for listing funding sources and
+# a sentence for research without funding (see "Funding sources" in the
+# Guide for Authors).
+# competing-interests: delete this entry if you upload the declaration
+# that Elsevier's declarations tool produces; the guide asks for it on the
+# title page only when that file is not submitted.
+declarations:
+  funding: |
+    This work was supported by [name of the funding organization] [grant
+    number xxxx].
+  competing-interests: |
+    The authors have no competing interests to declare.
+  # CRediT roles, as the guide lists them: Conceptualization, Data curation,
+  # Formal analysis, Funding acquisition, Investigation, Methodology,
+  # Project administration, Resources, Software, Supervision, Validation,
+  # Visualization, Writing – original draft, Writing – review and editing
+  author-contributions: |
+    First Author: Conceptualization, Methodology, Writing – original draft.
+    Second Author: Formal analysis, Writing – review and editing.

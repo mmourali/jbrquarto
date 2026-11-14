@@ -1,0 +1,20 @@
+---
+# ======================================================================
+# JBR Title Page (jbrquarto 1.0.0)
+# ======================================================================
+# The title page with author details is a separate file. It holds the
+# title, the author names and affiliations, the full postal address and
+# e-mail address of the corresponding author, acknowledgments, funding,
+# and the declaration of competing interests. Edit the author information
+# in _title-page.yml.
+# ======================================================================
+
+title: "How social media influencers build brand loyalty among millennial consumers"
+jbr-mode: title-page
+metadata-files:
+  - _title-page.yml
+
+format:
+  jbrquarto-docx: default
+  jbrquarto-pdf: default
+---

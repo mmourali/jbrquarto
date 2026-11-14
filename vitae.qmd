@@ -1,0 +1,18 @@
+---
+# ======================================================================
+# JBR Vitae (jbrquarto 1.0.0)
+# ======================================================================
+# JBR asks for a short biography of each author, of at most 100 words, in
+# an editable format (rendering this file writes vitae.docx), and for a
+# passport-type photograph of each author as a separate figure. Write the
+# biographies in _title-page.yml, as the "biography" of each author. The
+# extension warns when a biography exceeds 100 words.
+# ======================================================================
+
+jbr-mode: vitae
+metadata-files:
+  - _title-page.yml
+
+format:
+  jbrquarto-docx: default
+---

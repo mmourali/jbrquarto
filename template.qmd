@@ -1,0 +1,263 @@
+---
+# ======================================================================
+# JBR Manuscript Template (jbrquarto 1.0.0)
+# Journal of Business Research
+# ======================================================================
+# OUTPUT FORMATS (listed under format: below; render one or all):
+#   jbrquarto-docx   Word manuscript
+#   jbrquarto-latex  The .tex source of the PDF; compile it with pdflatex
+#   jbrquarto-pdf    PDF typeset with pdflatex, for sharing and checking
+# JBR accepts editable source files (.docx or .tex); a PDF is not an
+# acceptable source file.
+#
+# FILES: JBR uses double anonymized review. Submit the anonymized
+# manuscript (this file), a separate title page with the author details
+# (title-page.qmd), a short biography of each author (vitae.qmd), each
+# figure as a separate file (see jbr-figures below), and, if you wish,
+# highlights (highlights.qmd).
+#
+# KEY REQUIREMENTS: at most 45 double-spaced pages with 1-inch margins and
+# 12-point type, not counting the title and abstract pages; an abstract of
+# at most 150 words; four to six keywords; numbered sections (1, 1.1,
+# 1.1.1); tables and references on separate pages at the end; the title
+# repeated, without the authors' names, on the page where the text begins.
+# The guide adds that final accepted manuscripts typically should have
+# fewer than 8,000 words, all inclusive.
+#
+# Every option is described in the README at github.com/mmourali/jbrquarto.
+# ======================================================================
+
+title: "How social media influencers build brand loyalty among millennial consumers"
+
+# --- Mode: manuscript (the default) or article (a publication-style
+#     preview for sharing drafts; PDF and .tex only) ---
+jbr-mode: manuscript
+
+# --- Abstract (at most 150 words): the purpose of the paper, the basic
+#     procedures, the main findings, and the principal conclusions ---
+abstract: |
+  Social media has changed the way brands connect with consumers, and many
+  brands now work with social media influencers to reach their target
+  audiences. This research investigates the role of influencers in building
+  brand loyalty among millennial consumers. A survey of 200 consumers shows
+  that trust in an influencer is positively associated with loyalty to the
+  brands the influencer endorses, and that this association is stronger for
+  familiar brands. The research offers guidance on how brands can work with
+  influencers to strengthen their relationships with consumers.
+
+# --- Keywords (four to six) ---
+keywords:
+  - social media
+  - influencers
+  - brand loyalty
+  - millennial consumers
+  - marketing strategy
+
+# --- Declarations, printed in new sections before the reference list.
+#     Statements that identify the authors (funding, competing interests,
+#     author contributions) belong in _title-page.yml.
+#     generative-ai: name the tool and say what it was used for; the
+#     guide gives an example statement under "Declaration of generative AI
+#     use". Delete the entry if no such tool was used: the guide asks for
+#     no statement then.
+#     data-availability: JBR encourages authors to deposit their research
+#     data in a repository and to cite and link the dataset in the article,
+#     or else to state why the data cannot be shared. ---
+declarations:
+  generative-ai: |
+    While preparing this manuscript, the authors used [name of the tool or
+    service] to [purpose]. The authors reviewed and edited the output and
+    take full responsibility for the content of the article.
+  data-availability: |
+    The data and the analysis code are available at [anonymized repository
+    link].
+
+# --- Tables and figures: "end" (the default) moves each to a separate
+#     page after the references and marks its place in the text, because
+#     JBR asks for tables on separate pages at the end; "inline" leaves
+#     them next to the text ---
+jbr-floats: end
+
+# --- Figures as separate files. JBR asks for each figure as a separate
+#     file (Figure_1, Figure_2, ...) along with the manuscript.
+#       embedded   figures in the manuscript only (the default without
+#                  this option)
+#       files      figures in the manuscript, and a copy of each in the
+#                  folder "<this file's name>-figures"
+#       separate   the copies only; the manuscript lists the captions
+#                  on one page, in place of a page for each figure
+#     The PDF and .tex outputs write vector (PDF) versions of figures drawn
+#     by code; the Word output writes PNG versions. A figure with panels
+#     gives one file for each panel. ---
+jbr-figures: files
+
+format:
+  jbrquarto-docx: default
+  jbrquarto-pdf: default
+  jbrquarto-latex: default
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+fig-dpi: 300
+
+# Citations such as [@bagozzi1988] are formatted in APA style (7th edition),
+# the journal's reference style
+bibliography: bibliography.bib
+---
+
+# Introduction
+
+Social media has become an essential part of daily life, and it has changed
+the way consumers present themselves and connect with one another
+[@belk2013]. It has also changed the way brands connect with consumers. Many
+brands now work with social media influencers to reach and engage their
+target audiences.
+
+# Theoretical background
+
+Brand loyalty represents the degree to which customers are committed to
+purchasing a particular brand, and it is a central component of brand equity
+[@aaker1991]. Research on relationship marketing in consumer markets
+[@bagozzi1995] suggests that consumers form relationships with brands.[^fn1]
+
+[^fn1]: Use footnotes sparingly.
+
+## Social media influencers and brand loyalty
+
+Influencers can strengthen brand loyalty by providing valuable content and
+by engaging with their followers. Internet-enabled market environments
+change how firms build and defend their positions [@varadarajan2008], and
+influencers have become part of that environment.
+
+::: {.hypothesis}
+H1: Trust in an influencer is positively associated with loyalty to the
+brands that the influencer endorses.
+:::
+
+::: {.hypothesis}
+H2: The association between trust in an influencer and brand loyalty is
+stronger for familiar brands than for unfamiliar brands.
+:::
+
+## Millennial consumers
+
+Millennial consumers are an important target audience because they are
+active users of social media and have substantial buying power.
+
+# Method
+
+## Sample and procedure
+
+Two hundred members of an online panel completed the survey. Participants
+rated their trust in an influencer they follow, their familiarity with a
+brand the influencer endorses, and their loyalty to that brand.
+
+## Measures
+
+All measures used seven-point scales. We evaluated the measurement model
+with the criteria that @bagozzi1988 recommend. @tbl-descriptives reports
+descriptive statistics.
+
+| Variable         | M    | SD   | n   |
+|:-----------------|-----:|-----:|----:|
+| Brand loyalty^a^ | 4.21 | 1.02 | 200 |
+| Purchase intent  | 3.87 | 1.15 | 200 |
+| Influencer trust | 4.56 | 0.89 | 200 |
+
+: Descriptive statistics for the study variables {#tbl-descriptives}
+
+::: {.notes}
+All variables were measured on seven-point scales.
+
+^a^Average of four items.
+:::
+
+# Results
+
+@eq-model presents the model:
+
+$$
+\mathit{Loyalty}_i = \beta_0 + \beta_1 \mathit{Trust}_i + \beta_2 \mathit{Familiarity}_i + \beta_3 \mathit{Trust}_i \times \mathit{Familiarity}_i + \varepsilon_i
+$$ {#eq-model}
+
+Trust in the influencer was positively associated with brand loyalty
+(b = 0.38, SE = 0.08, *p* < .001), and this association was stronger for
+familiar brands (b = 0.15, SE = 0.06, *p* = .013; @tbl-regression and
+@fig-loyalty).
+
+| Predictor              | Model 1     | Model 2     |
+|:-----------------------|:-----------:|:-----------:|
+| Intercept              | 2.45 (0.21) | 2.31 (0.20) |
+| Influencer trust       | 0.42 (0.08) | 0.38 (0.08) |
+| Brand familiarity      | 0.28 (0.07) | 0.25 (0.07) |
+| Trust × Familiarity    |             | 0.15 (0.06) |
+| R^2^                   | .31         | .34         |
+
+: Regression of brand loyalty on influencer trust and brand familiarity {#tbl-regression}
+
+::: {.notes}
+Unstandardized coefficients, with standard errors in parentheses.
+:::
+
+```{r}
+#| label: fig-loyalty
+#| fig-cap: "Brand loyalty by trust in the influencer and brand familiarity. Error bars represent ±1 SE"
+#| fig-width: 6
+#| fig-height: 3.6
+
+library(ggplot2)
+
+# Estimated means and standard errors from Model 2
+loyalty <- data.frame(
+  trust = factor(rep(c("Low trust", "High trust"), times = 2),
+                 levels = c("Low trust", "High trust")),
+  familiarity = rep(c("Unfamiliar brand", "Familiar brand"), each = 2),
+  mean = c(3.62, 4.05, 3.80, 4.88),
+  se = c(0.14, 0.13, 0.14, 0.12)
+)
+
+ggplot(loyalty, aes(x = trust, y = mean, fill = familiarity)) +
+  geom_col(position = position_dodge(width = .7), width = .6, color = "black") +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se),
+                position = position_dodge(width = .7), width = .15) +
+  scale_fill_manual(values = c("grey35", "grey80")) +
+  scale_y_continuous(breaks = 1:7) +
+  coord_cartesian(ylim = c(1, 7)) +
+  labs(x = "Trust in the influencer", y = "Brand loyalty", fill = NULL) +
+  theme_classic(base_size = 12) +
+  theme(legend.position = "bottom")
+```
+
+# Discussion
+
+The findings indicate that influencers can strengthen brand loyalty among
+millennial consumers and that familiar brands benefit the most.
+
+## Theoretical implications
+
+Summarize the contribution to theory here.
+
+## Managerial implications
+
+Summarize the implications for practice here.
+
+# Appendix A. Survey items {.appendix}
+
+@tbl-items lists the items of the brand loyalty scale. Appendixes are
+identified as A, B, and so on, and their tables, figures, and equations are
+numbered separately.
+
+| Item | Wording                                         |
+|:-----|:------------------------------------------------|
+| 1    | I intend to keep buying this brand.             |
+| 2    | I would recommend this brand to a friend.       |
+
+: Brand loyalty items {#tbl-items}
+
+# References
+
+::: {#refs}
+:::
